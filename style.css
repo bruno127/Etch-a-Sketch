@@ -1,5 +1,39 @@
-.board {
-    width: 500px;
-    height: 500px;
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+  }
+  .container {
+    margin: 0 auto;
+    padding: 20px;
+    width: 900px;
+    background-color: purple;
+  }
+  .container .buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .container .buttons button {
+    width: 150px;
+    height: 60px;
+    background: green;
+    border-radius: 25%;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .container .screen {
     display: grid;
-}
+    width: 800px;
+    height: 800px;
+    border: 5px solid green;
+    margin: 20px auto;
+  }

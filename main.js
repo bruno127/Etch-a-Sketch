@@ -1,9 +1,52 @@
-let board = document.querySelector('.board')
-board.style.gridTemplateColumns = 'repeat(16, 1fr)';
-board.style.gridTemplateRows = 'repeat(16, 1fr)';
+const buttons = document.querySelectorAll("button");
+const screen = document.querySelector(".screen");
 
-for (let i=0; i<256; i++) {
-    let square = document.createElement('div');
-    square.style.backgroundColor = 'blue';
-    board.insertAdjacentElement('beforeend', square);
+let pixel; 
+let gridsize = 50;
+
+function drawGrid (screenSize) {
+  for (let i=0; i < screenSize**2; i++) {
+    pixel = document.createElement('div');
+    pixel.classList.add("pixel");
+    pixel.addEventListener('mouseover', () => {
+      pixel.style.backgroundColor = 'black';
+    })
+    pixel.style.backgroundColor = 'white'
+    screen.appendChild(pixel);
+  }
+  screen.style.gridTemplateColumns = `repeat(${screenSize}, auto)`;
+  screen.style.gridTemplateRows = `repeat(${screenSize}, auto)`;
 }
+
+  drawGrid(2);
+
+  function clear (request) {
+    if(request === 'resize'){
+      gridsize = prompt('please enter a new grid size of not more than 100', 50);
+      if(gridsize > 100 || gridsize === null){
+      gridsize = 100;
+    }
+    }
+    screen.innerHTML = '';
+    drawGrid(gridsize);
+  }
+
+
+
+
+
+/*
+function drawGrid (screenSize) {
+  for(i = 0; i < screenSize ** 2; i++) {
+    pixel = document.createElement('div')
+    pixel.classList.add("pixel");
+    pixel.style.backgroundColor = 'white';
+    screen.appendChild(pixel);
+    
+  }
+  screen.style.gridTemplateColumns = `repeat(${screenSize}, auto)`; 
+  screen.style.gridTemplateRows =  `repeat(${screenSize}, auto)`;
+  
+}
+
+drawGrid(5);  */
