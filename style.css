@@ -2,39 +2,67 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: #F0F8FF;
   }
   
   h1 {
     text-align: center;
     font-size: 3rem;
-    color: #fff;
   }
-  
+
   .container {
-    margin: 0 auto;
+    margin: 100px auto;
     padding: 20px;
-    width: 900px;
-    background-color: purple;
+    width: 700px;
+    height: 700px;
   }
   .container .buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
+    gap: 10px;
   }
   
   .container .buttons button {
-    width: 150px;
-    height: 60px;
     background: green;
     border-radius: 25%;
-    font-size: 2rem;
+    font-size: 25px;
     color: white;
   }
   
   .container .screen {
     display: grid;
-    width: 800px;
-    height: 800px;
+    width: 500px;
+    height: 500px;
     border: 5px solid green;
     margin: 20px auto;
   }
+  #black {
+    background-color: black;
+  }
+  #eraser, #reset{
+    background-color: white;
+    color: black;
+  }
+  #colors {
+    background: linear-gradient(0.25turn, #f65cfc, #ebf8e1, #583cf6);
+  }
+  #resize {
+    background:#4682B4;
+  }
+
+  .fa-github {
+    color: var(--primary-light);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+  }
+
+  .footer {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3rem;
+}
