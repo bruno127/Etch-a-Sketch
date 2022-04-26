@@ -1,1 +1,1 @@
-# Etch-a-Sketch
+Etch-a-sketch game. It really tested my patience, and knowledge too. 
