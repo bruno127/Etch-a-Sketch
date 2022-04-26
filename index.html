@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <title>SketchPad</title>
 </head>
 <body>
     <div class="container">
         <h1>Etch A Sketch</h1>
+        <div class="screen">
+        </div>
         <div class="buttons">
             <button id="eraser" type="button" onclick="colorWhite()">Eraser</button>
             <button id="black" type="button" onclick="colorBlack()">Black</button>
@@ -18,9 +20,12 @@
             <button id="resize" type="button" onclick="resize()">Resize</button>
             <button id="reset" type="button" onclick="reset()">Reset</button>
         </div>
-        <div class="screen">
-        </div>
     </div>
+    <div class='footer'>
+        <p>Copyright © 2022 bruno127 <a href="https://github.com/bruno127" target="_blank">
+            <i class="fab fa-github"></i
+          ></a></p>
+      </div>
 </body>
 <script src="main.js"></script>
 </html>
